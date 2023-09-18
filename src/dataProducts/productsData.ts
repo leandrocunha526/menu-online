@@ -254,12 +254,12 @@ export const productsByCategory: ProductsByCategory = {
         },
     ],
     "🍺 Bebidas": [
-        { id: 1, name: "Coca Cola 1l", price: 3.89, quantity: 1, image: "" },
-        { id: 2, name: "Guaraná Antática 1l", price: 18.0, quantity: 1, image: "" },
-        { id: 3, name: "Fanta Laranja 1l", price: 12.0, quantity: 1, image: "" },
-        { id: 4, name: "Kuat 1l", price: 18.0, quantity: 1, image: "" },
-        { id: 5, name: "Sprite Fresh", price: 12.0, quantity: 1, image: "" },
-        { id: 6, name: "Fanta Uva 1l", price: 18.0, quantity: 1, image: "" },
+        { id: 1, name: "Coca Cola 1L", price: 8.50, quantity: 1, image: "/drinks/coca.jpg" },
+        { id: 2, name: "Guaraná Antarctica 1L", price: 6.0, quantity: 1, image: "/drinks/guarana-antarctica.webp" },
+        { id: 3, name: "Fanta Laranja 1L", price: 8.00, quantity: 1, image: "/drinks/fantinha.jpeg" },
+        { id: 4, name: "Kuat 1L", price: 7.0, quantity: 1, image: "/drinks/kuat.jpg" },
+        { id: 5, name: "Sprite Fresh 1.5L", price: 6.50, quantity: 1, image: "/drinks/sprinte.jpeg" },
+        { id: 6, name: "Fanta Uva 1L", price: 7.0, quantity: 1, image: "/drinks/fantinhauva.webp" },
     ],
     "🍨 Sobremesas": [
     ],
