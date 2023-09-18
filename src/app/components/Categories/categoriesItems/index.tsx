@@ -38,7 +38,7 @@ export default function CategoryItems({
     setProducts((prevProducts) => {
       return prevProducts.map((product) => {
         if (product.id === productId) {
-          product.quantity++;
+          return {...product, quantity: product.quantity + 1}
         }
         return product;
       });
@@ -49,7 +49,7 @@ export default function CategoryItems({
     setProducts((prevProducts) => {
       return prevProducts.map((product) => {
         if (product.id === productId) {
-          product.quantity--;
+          return {...product, quantity: Math.max(product.quantity - 1, 1)}
         }
         return product;
       });
