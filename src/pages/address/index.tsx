@@ -78,7 +78,7 @@ const AddressForm = () => {
           zipCode: zipCode,
         });
         setError("");
-        toast.success("Address found and filled successfully!", {
+        toast.success("Endereço encontrado e salvo com sucesso!", {
           position: "top-right",
           autoClose: 3000,
         });
@@ -91,7 +91,7 @@ const AddressForm = () => {
           number: "",
           zipCode: zipCode,
         });
-        setError("Unable to find the address for the provided ZIP code.");
+        setError("Não foi possível encontrar o endereço do CEP fornecido. Verifica se as informações foram inseridas corretamente e anteriormente.");
       });
   };
 
@@ -112,13 +112,13 @@ const AddressForm = () => {
             <div className="divide-y divide-gray-200">
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <h2 className="text-2xl font-semibold">
-                  Address Form
+                  Cadastro de endereço para entrega, por favor preencha os dados
                 </h2>
                 <Link
                   href="/"
                   className="hover:underline text-blue-500 hover:text-blue-700"
                 >
-                  Return to the homepage
+                  Retornar para o cardápio
                 </Link>
                 <div className="relative">
                   <label htmlFor="zipCode" className="font-bold text-gray-900">
@@ -186,7 +186,7 @@ const AddressForm = () => {
                   onClick={handleSaveButtonClick}
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline-blue focus:border-blue-700 active:bg-blue-800"
                 >
-                  Save Address
+                  Salvar endereço
                 </button>
               </div>
               <span className="text-red-500">{error}</span>
