@@ -18,6 +18,13 @@ interface CategoryItemsProps {
   selectedCategory: string;
 }
 
+interface Address {
+  street: string;
+  number: string;
+  zipCode: string;
+  neighborhood: string;
+}
+
 export default function CategoryItems({
   selectedCategory,
 }: CategoryItemsProps) {
@@ -28,6 +35,20 @@ export default function CategoryItems({
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedSlices, setSelectedSlices] = useState<number[]>([]);
+  const [address, setAddress] = useState<Address>({
+    street: "",
+    number: "",
+    zipCode: "",
+    neighborhood: "",
+  });
+
+  useEffect(() => {
+    const savedAddress = localStorage.getItem("address");
+    if (savedAddress) {
+      const parsedAddress = JSON.parse(savedAddress);
+      setAddress(parsedAddress);
+    }
+  }, []); // Empty dependency array ensures this effect runs once when the component mounts
 
   const handleProductClick = (productId: number) => {
     setSelectedProductsId(productId);
@@ -202,9 +223,9 @@ export default function CategoryItems({
       {isCartOpen && (
         <Cart
           cartItems={cartItems}
+          address={address}
           onClose={() => setIsCartOpen(false)}
-          handleRemoveItem={removeCartItem}
-        />
+          handleRemoveItem={removeCartItem} />
       )}
       <ToastContainer />
     </div>
